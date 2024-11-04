@@ -4,6 +4,7 @@
   font-style: normal;
 }
 .header{
+  height: auto;
   width: 800px;
   display: flex;
   flex-direction: row;
