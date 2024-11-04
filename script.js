@@ -7,8 +7,8 @@ let canvas = document.getElementById('gameCanvas');
 let ctx = canvas.getContext('2d');
 
 //snake
-let snakeX = 100;
-let snakeY = 200;
+let snakeX = 10 * blockDim /2;
+let snakeY = 20 * blockDim /2;
 
 let snakeBody = [];
 
@@ -70,7 +70,7 @@ function update()
   }
   
   //Game Over Conditions
-  if((snakeX > canvasWidth || snakeX < 0) || (snakeY > canvasHeight || snakeY < 0))
+  if((snakeX > canvasWidth - 20 || snakeX < 0) || (snakeY > canvasHeight - 20 || snakeY < 0))
   {
     gameOver = true;
     alert("Game Over!")
