@@ -58,7 +58,7 @@ function update() {
   if (snakeX === foodX && snakeY === foodY) {
     snakeBody.push([foodX, foodY]);
     score++;
-    document.getElementById("currentScore").innerText = "Score: " + score;
+    document.getElementById("currentScore").innerText = "Score"+ score;
 
     if (score > highScore) {
       highScore = score;
