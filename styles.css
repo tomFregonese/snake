@@ -4,7 +4,6 @@
   font-style: normal;
 }
 .header{
-  height: auto;
   width: 800px;
   display: flex;
   flex-direction: row;
@@ -23,11 +22,22 @@ body {
   color: white;
 }
 
-h2{
-  padding: 20px;
+.titleh2{
+  text-align: center;
+  width:70%;
+  /* border: black solid; */
+  font-size: 30px; 
+  padding-bottom: 20px;
+  padding-top: 30px;
 }
-h1{
-  padding: 10px;
+.titleh1{
+  text-align: center;
+  width: 100%;
+  /* border: black solid; */
+  font-size: 40px;
+  padding-bottom: 30px;
+  padding-top: 10px;
+  
 }
 
 canvas {
