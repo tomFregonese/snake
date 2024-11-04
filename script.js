@@ -22,6 +22,9 @@ appleImage.src = 'apple.png'; // Assurez-vous que le chemin de l'image est corre
 
 let gameOver = false;
 
+//score
+let score = 0;
+
 document.addEventListener("DOMContentLoaded", function() {
 
   placeFood();
@@ -52,7 +55,9 @@ function update() {
   ctx.drawImage(appleImage, foodX, foodY, blockDim, blockDim);
   // Vérifier si le serpent mange la nourriture
   if (snakeX === foodX && snakeY === foodY) {
-    snakeBody.push([foodX, foodY]);
+    snakeBody.push([foodX, foodY]),
+    score= score+1;
+    document.getElementById("score").textContent = score;
     placeFood();
   }
 
