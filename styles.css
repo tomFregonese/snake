@@ -18,8 +18,10 @@ body {
   font-family: "Jersey 25", sans-serif;
   font-weight: 400;
   font-style: normal;
-  background-color: #CD663A;
+  background : linear-gradient(180deg, #210D2D 0%, #282968 100%);
   color: white;
+  overflow: hidden;
+
 }
 
 .titleh2{
@@ -43,4 +45,5 @@ body {
 canvas {
   border: 5px solid #264B21;
   box-shadow: 1px 1px 10px 10px rgba(0, 0, 0, 0.342);
+  scale: 0.9;
 }

@@ -17,8 +17,9 @@ let snakeX = 0;
 let snakeY = 200;
 let snakeBody = [];
 
-let snakeVelX = 0;
+let snakeVelX = 0;  
 let snakeVelY = 0;
+
 
 // Nourriture
 let foodX;
@@ -81,7 +82,7 @@ function update() {
   }
 
   // Dessiner le serpent
-  ctx.fillStyle = "#2FD326";
+  ctx.fillStyle = "black";
   snakeX += snakeVelX;
   snakeY += snakeVelY;
   ctx.fillRect(snakeX, snakeY, blockDim, blockDim);
@@ -90,8 +91,7 @@ function update() {
   }
   
   //Game Over Conditions
-  if((snakeX > canvasWidth - 20 || snakeX < 0) || (snakeY > canvasHeight - 20 || snakeY < 0))
-  {
+  if ((snakeX >= canvasWidth || snakeX < 0) || (snakeY >= canvasHeight || snakeY < 0)) {
     gameOver = true;
     alert("Game Over!");
     resetGame();
@@ -127,20 +127,21 @@ function placeFood() {
 }
 
 function changeDirection(event) {
-  if (event.key === "ArrowUp" && snakeVelY === 0) {
-    snakeVelY = -1 * blockDim;
+  if ((event.key === "ArrowUp" || event.key === "z") && snakeVelY === 0) {
+    snakeVelY = -blockDim;
     snakeVelX = 0;
   }
-  if (event.key === "ArrowDown" && snakeVelY === 0) {
-    snakeVelY = 1 * blockDim;
+  if ((event.key === "ArrowDown" || event.key === "s") && snakeVelY === 0) {
+    snakeVelY = blockDim;
     snakeVelX = 0;
   }
-  if (event.key === "ArrowLeft" && snakeVelX === 0) {
-    snakeVelX = -1 * blockDim;
+  if ((event.key === "ArrowLeft" || event.key === "q") && snakeVelX === 0) {
+    snakeVelX = -blockDim;
     snakeVelY = 0;
   }
-  if (event.key === "ArrowRight" && snakeVelX === 0) {
-    snakeVelX = 1 * blockDim;
+  if ((event.key === "ArrowRight" || event.key === "d") && snakeVelX === 0) {
+    snakeVelX = blockDim;
     snakeVelY = 0;
   }
 }
+
