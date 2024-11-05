@@ -1,14 +1,46 @@
+.jersey-25-regular {
+  font-family: "Jersey 25", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+.header{
+  width: 800px;
+  display: flex;
+  flex-direction: row;
+  justify-content:space-around;
+  font-family: "Jersey 25", sans-serif ;
+}
 body {
   display: flex;
   flex-direction: column;
   align-items: center;
   font-family: Arial, sans-serif;
+  font-family: "Jersey 25", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  background-color: #CD663A;
+  color: white;
 }
 
-h1 {
-  margin-bottom: 20px;
+.titleh2{
+  text-align: center;
+  width:80%;
+  /* border: black solid; */
+  font-size: 30px; 
+  padding-bottom: 20px;
+  padding-top: 30px;
+}
+.titleh1{
+  text-align: center;
+  width: 100%;
+  /* border: black solid; */
+  font-size: 40px;
+  padding-bottom: 30px;
+  padding-top: 10px;
+  
 }
 
 canvas {
-  border: 1px solid black;
+  border: 5px solid #264B21;
+  box-shadow: 1px 1px 10px 10px rgba(0, 0, 0, 0.342);
 }
