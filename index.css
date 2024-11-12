@@ -1,0 +1,97 @@
+@import url('resources/fonts/fonts.css');
+
+
+body{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    max-height: 100vh;
+    background: #CD663A;
+    color: white;
+}
+
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    padding: 1rem 2rem;
+    font-weight: bold;
+
+    .score {
+        img {
+            width: 2rem;
+        }
+        font-size: 2.5rem;
+    }
+
+    .title {
+        font-size: 4rem;
+        font-family: "Jersey-25", sans-serif;
+        margin: 0 4rem;
+    }
+}
+
+
+.playground{
+    width : 65vmin;
+    height : 65vmin;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    grid-template: repeat(20, 1fr) / repeat(20, 1fr);
+    background-image: url('resources/img/grass-sprite.png');
+
+    .food{
+        width: 100%;
+        height: 100%;
+        display: flex;
+        background-image: url('resources/img/red-apple.png');
+        background-size: cover;
+    }
+
+
+    .snake-head{
+        width: 100%;
+        height: 100%;
+        display: flex;
+        background : aliceblue;
+        border-radius: 50%;
+        position: relative;
+
+        .mouth{
+            width: 50%;
+            height: 50%;
+            position: absolute;
+            border-radius: 50%;
+            background: #CD663A;
+        }
+
+        ::before, ::after{
+            content: '';
+            width: 50%;
+            height: 50%;
+            position: absolute;
+            border-radius: 50%;
+            top: 30%;
+        }
+
+        ::before{
+            left: 30%;
+        }
+
+        ::after{
+            right: 30%;
+        }
+    }
+
+    .snake-body{
+        width: 100%;
+        height: 100%;
+        display: flex;
+        background : aliceblue;
+    }
+
+}
+
